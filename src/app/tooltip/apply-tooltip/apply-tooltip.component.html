@@ -1,4 +1,8 @@
-<div>
-  Tooltip
-  <ng-content></ng-content>
+<div class="tooltip-container">
+  <div [class]="'tooltip' + (isOpen ? ' active' : '')">
+    {{ content }}
+  </div>
+  <div (mouseover)="showTooltip()" (mouseout)="hideTooltip()">
+    <ng-content></ng-content>
+  </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'apply-tooltip',
@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./apply-tooltip.component.scss']
 })
 export class ApplyTooltipComponent implements OnInit {
-
-  constructor() { }
+  @Input() content: string
+  isOpen: boolean
 
   ngOnInit() {
+    this.isOpen = false
+  }
+
+  showTooltip() {
+    this.isOpen = true
+  }
+
+  hideTooltip() {
+    this.isOpen = false
   }
 
 }
