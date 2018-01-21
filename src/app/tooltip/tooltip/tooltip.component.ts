@@ -17,13 +17,13 @@ export class TooltipComponent implements OnInit {
     this.uid = Math.round((Math.random() * 10e5)).toString(16)
   }
 
-  ngOnInit() {
+  ngOnInit () {
     this.tooltipService.openTooltip.subscribe(openTooltipUID => {
       this.isOpen = openTooltipUID === this.uid
     })
   }
 
-  showTooltip() {
+  showTooltip () {
     this.tooltipService.setOpenTooltip(this.uid)
   }
 }
