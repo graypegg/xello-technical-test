@@ -7,10 +7,12 @@ export class TooltipService {
   private openedTooltips = new BehaviorSubject<any>([])
   openTooltip = this.openedTooltips.asObservable()
 
-  constructor() { }
-
   setOpenTooltip(tooltipUID: string) {
     this.openedTooltips.next(tooltipUID)
+
+    // document.addEventListener('click', (e) => {]
+    //   this.clearOpenTooltip()
+    // })
   }
 
   clearOpenTooltip () {

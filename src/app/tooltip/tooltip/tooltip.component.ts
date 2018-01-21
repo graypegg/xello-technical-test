@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core'
+import { Component, OnInit, Input, HostBinding } from '@angular/core'
 import { TooltipService } from '../tooltip.service'
 
 @Component({
@@ -9,7 +9,8 @@ import { TooltipService } from '../tooltip.service'
 export class TooltipComponent implements OnInit {
   @Input() content: string
 
-  isOpen: boolean
+  @HostBinding('class.active') private isOpen: boolean;
+
   uid: string
 
   constructor (private tooltipService: TooltipService) {
