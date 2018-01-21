@@ -21,4 +21,7 @@ export class ApplyTooltipComponent implements OnInit {
     this.isOpen = false
   }
 
+  toggleTooltip() {
+    this.isOpen = !this.isOpen
+  }
 }
