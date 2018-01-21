@@ -9,12 +9,10 @@ import { TooltipService } from '../tooltip.service'
 export class TooltipComponent implements OnInit {
   @Input() content: string
 
-  @HostBinding('class.active') private isOpen: boolean;
-
   uid: string
 
   constructor (private tooltipService: TooltipService) {
-    this.uid = Math.round((Math.random() * 10e5)).toString(16)
+    this.uid = `tooltip-${Math.round((Math.random() * 10e5)).toString(16)}`
   }
 
   ngOnInit () {
