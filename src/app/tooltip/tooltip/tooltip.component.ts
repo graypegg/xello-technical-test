@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'apply-tooltip',
-  templateUrl: './apply-tooltip.component.html',
-  styleUrls: ['./apply-tooltip.component.scss']
+  selector: 'tooltip',
+  templateUrl: './tooltip.component.html',
+  styleUrls: ['./tooltip.component.scss']
 })
-export class ApplyTooltipComponent implements OnInit {
+export class TooltipComponent implements OnInit {
   @Input() content: string
   isOpen: boolean
 
