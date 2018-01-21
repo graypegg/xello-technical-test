@@ -1,7 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
+import { BehaviorSubject } from 'rxjs/BehaviorSubject'
 import { TooltipComponent } from './tooltip/tooltip.component'
-
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class TooltipService {
@@ -10,11 +9,11 @@ export class TooltipService {
 
   constructor() { }
 
-  /* getOpenTooltip(): string {
-    return this.openTooltip
-  } */
-
   setOpenTooltip(tooltipUID: string) {
     this.openedTooltips.next(tooltipUID)
+  }
+
+  clearOpenTooltip () {
+    this.setOpenTooltip(null)
   }
 }

@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { TooltipService } from '../tooltip.service';
+import { Component, OnInit, Input } from '@angular/core'
+import { TooltipService } from '../tooltip.service'
 
 @Component({
   selector: 'tooltip',
@@ -8,12 +8,12 @@ import { TooltipService } from '../tooltip.service';
 })
 export class TooltipComponent implements OnInit {
   @Input() content: string
+
   isOpen: boolean
   uid: string
 
   constructor (private tooltipService: TooltipService) {
     this.uid = Math.round((Math.random() * 10e5)).toString(16)
-
   }
 
   ngOnInit() {
