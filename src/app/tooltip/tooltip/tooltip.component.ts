@@ -10,6 +10,7 @@ export class TooltipComponent implements OnInit {
   @Input() content: string
 
   uid: string
+  isOpen: boolean
 
   constructor (private tooltipService: TooltipService) {
     this.uid = `tooltip-${Math.round((Math.random() * 10e5)).toString(16)}`
