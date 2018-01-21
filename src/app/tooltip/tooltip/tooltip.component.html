@@ -1,9 +1,9 @@
 <div class="tooltip-container" (click)='$event.stopPropagation()'>
   <div [class]="'tooltip fade bs-tooltip-top ' + (isOpen ? 'show' : 'hide')">
     <div class="arrow"></div>
-    <div class="tooltip-inner" [id]="uid">{{ content }}</div>
+    <div class="tooltip-inner" role="alert" [attr.aria-hidden]="!isOpen" [id]="uid">{{ content }}</div>
   </div>
-  <div (click)="showTooltip()">
+  <div (click)="showTooltip()" [attr.aria-labelledby]="uid">
     <ng-content></ng-content>
   </div>
 </div>
