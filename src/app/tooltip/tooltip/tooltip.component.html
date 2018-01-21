@@ -2,7 +2,7 @@
   <div [class]="'tooltip' + (isOpen ? ' active' : '')">
     {{ content }}
   </div>
-  <div (click)="toggleTooltip()">
+  <div (click)="showTooltip()">
     <ng-content></ng-content>
   </div>
 </div>
