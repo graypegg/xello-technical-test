@@ -1,6 +1,6 @@
 # Xello Technical Test
 
-Hi! The spec said to allow the demo to be run with a single npm command; I wasn't sure how literally to take that, so the app can be started from scratch with `npm run install-and-start`. (It's just "npm install; ng serve")
+Hi! The spec said to allow the demo to be run with a single npm command; I wasn't sure how literally to take that, so the app can be started from scratch with `npm run install-and-start`. (It's just "npm install; ng serve") This is built with Angular CLI, which means `ng serve` will make the site available at http://localhost:4200
 
 If you get an error on install about "cb() never called", you'll need to clear your NPM cache using `sudo npm cache clean`
 
