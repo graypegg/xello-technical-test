@@ -1,4 +1,4 @@
-<div class="tooltip-container" (click)='$event.stopPropagation()'>
+<div class="tooltip-container" (click)="$event.stopPropagation()">
   <div #tooltip [class]="'tooltip fade bs-tooltip-' + (offScreen ? 'bottom' : 'top') + ' ' + (isOpen ? 'show' : 'hide')">
     <div class="arrow"></div>
     <div class="tooltip-inner" role="alert" [attr.aria-hidden]="!isOpen" [id]="uid">{{ content }}</div>
