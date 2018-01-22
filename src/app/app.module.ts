@@ -1,20 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser'
+import { NgModule } from '@angular/core'
 
-import { TooltipModule } from './tooltip/tooltip.module';
+import { TooltipModule } from './tooltip/tooltip.module'
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './app.component'
+import { AppRoutingModule } from './app-routing.module';
+import { ButtonPageComponent } from './button-page/button-page.component'
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ButtonPageComponent
   ],
   imports: [
     BrowserModule,
-    TooltipModule
+    AppRoutingModule,
+    TooltipModule,
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
