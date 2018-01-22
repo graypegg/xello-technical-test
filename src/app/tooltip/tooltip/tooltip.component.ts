@@ -39,7 +39,6 @@ export class TooltipComponent implements OnInit, AfterViewInit {
     const targetPos = this.targetEl.nativeElement.getBoundingClientRect().y
     const tooltipHeight = this.tooltipEl.nativeElement.getBoundingClientRect().height
     this.offScreen = (targetPos - tooltipHeight) <= 0
-    console.log(targetPos, tooltipHeight, (targetPos - tooltipHeight))
   }
 
   showTooltip () {
