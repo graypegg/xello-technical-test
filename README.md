@@ -1,4 +1,8 @@
-# Xello
+# Xello Technical Test
+
+---
+Hi! The spec said to allow the demo to be run with a single npm command; I wasn't sure how literally to take that, so the app can be started from scratch with `npm run install-and-start`. (It's just "npm install; ng serve")
+---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
